@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>かぞえるくん サポート</title>
+<style>
+:root{--bg:#fff;--fg:#1d2430;--mut:#5a6577;--line:#d9dee7;--acc:#1c6b52;--soft:#f3f6f9;--warn:#fff7e0}
+@media (prefers-color-scheme:dark){:root{--bg:#14181f;--fg:#e6e9ee;--mut:#9aa5b5;--line:#2c3441;--acc:#6fcfa9;--soft:#1b212b;--warn:#2a2514}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;line-height:1.85;font-size:16px;-webkit-text-size-adjust:100%}
+main{max-width:46rem;margin:0 auto;padding:20px 16px 64px}
+h1{font-size:1.5rem;line-height:1.4;margin:.4em 0 .8em}
+h2{font-size:1.2rem;margin:2.2em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--acc)}
+h3{font-size:1.05rem;margin:1.6em 0 .4em}
+p,ul,ol{margin:.7em 0}
+ul,ol{padding-left:1.4em}
+li{margin:.3em 0}
+a{color:var(--acc);word-break:break-all}
+hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+blockquote{margin:1em 0;padding:.2em 1em;background:var(--soft);border-left:4px solid var(--acc);color:var(--fg)}
+.tw{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:30rem}
+th,td{border:1px solid var(--line);padding:.5em .6em;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+@media (max-width:600px){
+ table{min-width:0}
+ thead{display:none}
+ tr{display:block;border:1px solid var(--line);margin:0 0 .8em;border-radius:6px;overflow:hidden}
+ td{display:block;border:0;border-bottom:1px solid var(--line)}
+ td:last-child{border-bottom:0}
+ td::before{content:attr(data-label);display:block;font-size:.78rem;color:var(--mut);font-weight:bold}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>かぞえるくん サポート</h1>
+<p>写真に写った物を、Google の画像AI（Gemini）で数えるアプリです。ご自身の Google アカウントと Gemini API キーを使う作りで、運営者のサーバーは経由しません。</p>
+<h2>よくある質問</h2>
+<h3>使うのにお金はかかりますか</h3>
+<ul>
+<li>アプリは月10枚まで無料で数えられます。月額プラン（月25枚まで 200円／枚数の制限なし 480円）があります。価格はストアの表示が優先されます。</li>
+<li>別に、Google の API キーの利用枠があります。無料枠の範囲で使う場合は、課金を有効にしていないプロジェクトのキーをお使いください。利用枠と料金は Google AI Studio でご確認ください。</li>
+</ul>
+<h3>月額プランの確認・解約はどこでしますか</h3>
+<ul>
+<li>iPhone：設定 → 一番上の自分の名前 → サブスクリプション。</li>
+<li>Android：Google Play アプリ → 右上のアイコン → お支払いと定期購入 → 定期購入。</li>
+<li>解約しても、期間の終わりまでは使えます。アプリ内の「購入を復元する」は、機種変更や入れ直しのあとに使います。</li>
+</ul>
+<h3>APIキーはどこで取れますか</h3>
+<p>アプリの初期設定②に、画面つきの手順があります。Google AI Studio（https://aistudio.google.com/）で作成したキーを、アプリに貼り付けて「接続テスト」を押してください。</p>
+<h3>うまく数えられません</h3>
+<p>対象が重ならないように広げ、明るい場所で、真上から撮ってください。「赤い丸シール」のように具体的に書くほど正確です。アプリ内の「撮り方のコツ」もご覧ください。大切な数量は、実物と番号つきの枠を目でも確かめてください。</p>
+<h3>写真はどこへ送られますか</h3>
+<p>数えるときに、端末から Google の Gemini API へ直接送られます。運営者には送られません。くわしくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+<h2>お問い合わせ</h2>
+<ul>
+<li>提供者：ProcessRidge（個人開発者、日本）</li>
+<li>メール：sh1nya.tkg1016@gmail.com</li>
+<li>不具合のご連絡は、お使いの機種・OS のバージョン・起きたことをお書きください。返信まで数日いただくことがあります。</li>
+</ul>
+</main>
+</body>
+</html>

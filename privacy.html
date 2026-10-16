@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>かぞえるくん プライバシーポリシー</title>
+<style>
+:root{--bg:#fff;--fg:#1d2430;--mut:#5a6577;--line:#d9dee7;--acc:#1c6b52;--soft:#f3f6f9;--warn:#fff7e0}
+@media (prefers-color-scheme:dark){:root{--bg:#14181f;--fg:#e6e9ee;--mut:#9aa5b5;--line:#2c3441;--acc:#6fcfa9;--soft:#1b212b;--warn:#2a2514}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;line-height:1.85;font-size:16px;-webkit-text-size-adjust:100%}
+main{max-width:46rem;margin:0 auto;padding:20px 16px 64px}
+h1{font-size:1.5rem;line-height:1.4;margin:.4em 0 .8em}
+h2{font-size:1.2rem;margin:2.2em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--acc)}
+h3{font-size:1.05rem;margin:1.6em 0 .4em}
+p,ul,ol{margin:.7em 0}
+ul,ol{padding-left:1.4em}
+li{margin:.3em 0}
+a{color:var(--acc);word-break:break-all}
+hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+blockquote{margin:1em 0;padding:.2em 1em;background:var(--soft);border-left:4px solid var(--acc);color:var(--fg)}
+.tw{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:30rem}
+th,td{border:1px solid var(--line);padding:.5em .6em;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+@media (max-width:600px){
+ table{min-width:0}
+ thead{display:none}
+ tr{display:block;border:1px solid var(--line);margin:0 0 .8em;border-radius:6px;overflow:hidden}
+ td{display:block;border:0;border-bottom:1px solid var(--line)}
+ td:last-child{border-bottom:0}
+ td::before{content:attr(data-label);display:block;font-size:.78rem;color:var(--mut);font-weight:bold}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>かぞえるくん プライバシーポリシー</h1>
+<p>ProcessRidge（個人開発者、日本。以下「運営者」）は、スマートフォンアプリ「かぞえるくん」（Android / iOS。以下「本アプリ」）における情報の取り扱いを、次のとおり定めます。</p>
+<h2>先に結論（何がどこへ行くか）</h2>
+<ul>
+<li>写真、APIキー、数えた結果、個人情報は、<strong>運営者には送られません</strong>。運営者はサーバー、データベース、アカウントを持たないため、運営者がそれらを見ることはできません。</li>
+<li>数えるとき、あなたの端末から <strong>Google の Gemini API へ直接</strong> 、縮小した写真・数える対象の名前・APIキーが送られます。Google 側の取り扱いは Google の規約とプライバシーポリシーに従います。</li>
+<li>APIキーなどの設定は <strong>あなたの端末の中にだけ</strong> 保存されます。設定画面からいつでも削除できます。</li>
+<li>月額プランを契約すると、契約状態の確認のために、ストア（Google Play / App Store）と契約管理サービス <strong>RevenueCat</strong> が、匿名の利用者IDと購入の記録を取り扱います。氏名や支払い情報は運営者にも RevenueCat にも送られません。</li>
+</ul>
+<h2>1. 収集する情報</h2>
+<p>運営者は、本アプリを通じて、利用者の写真、APIキー、数えた結果、氏名・メールアドレスなどの個人情報を収集しません（受け取る仕組みがありません）。</p>
+<p>本アプリには、アカウント、ログイン、クッキー、広告、アクセス解析（Analytics）、クラッシュレポート、広告目的の追跡はありません（本ポリシー制定時点の版）。月額プランの契約状態の確認にだけ、第三者のサービス（RevenueCat。下の「3-2」）を使います。</p>
+<h2>2. 端末内にだけ保存する情報</h2>
+<p>次の情報は、利用者の端末の中にだけ保存され、運営者には送られません。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>情報</th>
+<th>保存の目的</th>
+<th>保存の方法・削除</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APIキー（アプリ内では「チケット」と表示）</td>
+<td>数える処理で Google の Gemini API を呼び出すため</td>
+<td>Android は flutter_secure_storage（EncryptedSharedPreferences 相当）、iOS は Keychain に保存します。端末のバックアップ対象外です。設定画面からいつでも削除できます。</td>
+</tr>
+<tr>
+<td>今月の解析回数（年月と回数）</td>
+<td>今月の利用回数を表示するため</td>
+<td>端末内に保存します。アプリのデータを消去するか、アプリを削除すると消えます。</td>
+</tr>
+<tr>
+<td>初期設定の途中経過</td>
+<td>初期設定を中断しても続きから再開するため</td>
+<td>端末内に保存します。アプリのデータを消去するか、アプリを削除すると消えます。</td>
+</tr>
+</tbody>
+</table></div>
+<p>「APIキー」とは、利用者ご自身が Google AI Studio で発行する Gemini API の鍵です。本アプリでは「チケット（APIキー）」と呼んでいます。</p>
+<h2>3. 外部へ送信する情報</h2>
+<h3>3-1. Google（数えるとき）</h3>
+<p>利用者が「数える」を実行すると、本アプリは利用者の端末から Google の Gemini API（generativelanguage.googleapis.com）へ、次の内容を<strong>直接</strong>送信します。運営者のサーバーは経由しません。</p>
+<ul>
+<li>利用者が選んだ写真（撮影またはアルバムから。縮小したもの）</li>
+<li>数える対象の名前（利用者が入力した文字）</li>
+<li>APIキー（利用者ご自身が発行したもの）</li>
+</ul>
+<p>Google から返ってきた結果（番号つきの枠）は、端末に表示されます。</p>
+<p>Google 側での取り扱いは、Google の利用規約・プライバシーポリシーに従います。Gemini API の無料枠では、送信したデータが Google のサービス改善に使われることがあります（Google の説明による。出典：<a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a>）。有料枠など、無料枠以外の場合の扱いは、上記の Google の規約でご確認ください。本アプリは、この点を初期設定の①で説明し、同意をいただいたうえでご利用いただく作りです。</p>
+<p>運営者は、Google へ送信されたデータを見ることも、削除することもできません。</p>
+<h3>3-2. ストアと RevenueCat（月額プランを契約するとき）</h3>
+<p>月額プラン（月25枚まで／枚数の制限なし）の購入と更新・解約は、Google Play または App Store を通じて行われます。クレジットカード番号などの支払い情報はストアが取り扱い、運営者にも RevenueCat にも送られません。</p>
+<p>契約状態（契約中かどうか、いつまでか）を確認するために、本アプリは契約管理サービス RevenueCat（RevenueCat, Inc.）の SDK を使います。RevenueCat のサーバーは、次の情報を取り扱います。</p>
+<ul>
+<li>本アプリが端末ごとに自動で付ける匿名の利用者ID（氏名やメールアドレスとは結びつきません）</li>
+<li>ストアから受け取る購入の記録（商品、購入日、契約の期間、価格と通貨）</li>
+<li>端末の種類と OS のバージョン、アプリのバージョン</li>
+</ul>
+<p>運営者は RevenueCat の管理画面で、匿名IDごとの契約状態と購入の記録を見ることができます。利用者が誰かは分かりません。RevenueCat 側の取り扱いは、RevenueCat のプライバシーポリシー（<a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>）に従います。</p>
+<p>月額プランを契約しない場合も、アプリの起動時に契約状態の確認（匿名IDの登録）が行われます。</p>
+<h2>4. 第三者への提供</h2>
+<p>運営者は利用者の情報を受け取らないため、第三者に提供することもありません。</p>
+<p>利用者ご自身の操作で行われる次の場合は、運営者を介さずに行われます。</p>
+<ul>
+<li>数える処理のための Google への送信（上の「3」のとおり）</li>
+<li>結果を共有する機能（OS の共有画面）で、利用者が選んだアプリや相手に送る場合</li>
+<li>外部のページ（Google AI Studio など）を開く場合。開いたページでの情報の取り扱いは、そのページの運営者の規約・ポリシーに従います。</li>
+<li>月額プランの契約状態の確認のための、ストアと RevenueCat との通信（上の「3-2」のとおり）</li>
+</ul>
+<p>本アプリが利用する外部ライブラリ（http、shared_preferences、flutter_secure_storage、image_picker、share_plus、url_launcher、gal）は、いずれも運営者へデータを送信しません。purchases_flutter（RevenueCat の SDK）は、上の「3-2」の情報を RevenueCat へ送信します。</p>
+<h2>5. 権限</h2>
+<p>本アプリは、次の権限を使います。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>権限</th>
+<th>使う場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インターネット</td>
+<td>数える処理で Google の Gemini API と通信するため</td>
+</tr>
+<tr>
+<td>カメラ</td>
+<td>写真を撮影するとき</td>
+</tr>
+<tr>
+<td>写真ライブラリ</td>
+<td>アルバムから写真を選ぶとき、結果の画像を保存するとき</td>
+</tr>
+<tr>
+<td>外部ストレージへの書き込み（Android 10 以下のみ）</td>
+<td>画像を保存するため</td>
+</tr>
+</tbody>
+</table></div>
+<p>権限は、端末の設定からいつでも変更できます。許可しない場合、その権限が必要な機能は使えません。</p>
+<h2>6. 利用者の選択（削除、同意の撤回）</h2>
+<ul>
+<li><strong>APIキーの削除</strong>：設定画面からいつでも削除できます。削除すると、本アプリから Google への送信はできなくなります（数える機能は使えなくなります）。</li>
+<li><strong>端末内の他のデータの削除</strong>：端末の設定から本アプリのデータを消去するか、アプリを削除すると、解析回数と初期設定の途中経過も消えます。</li>
+<li><strong>同意の撤回</strong>：Google への送信への同意は、APIキーを削除し、本アプリで数える操作を行わないことで撤回できます。すでに Google へ送信されたデータの扱いは、Google の規約に従います。Google に関する設定や削除の申請は、ご自身の Google アカウント・Google AI Studio 側で行ってください。</li>
+<li><strong>写真の選択</strong>：どの写真を送るかは、利用者が毎回選びます。選ばなかった写真は送信されません。</li>
+</ul>
+<h2>7. お子様の利用</h2>
+<p>本アプリは18歳以上の方を対象としています（Google アカウントと APIキーの取得が必要なためです）。子ども向けのサービスではありません。</p>
+<h2>8. 変更</h2>
+<p>本ポリシーは、必要に応じて変更することがあります。変更後の内容は、本ページに掲載した時点から適用します。収集する情報や送信先が変わるなど重要な変更をするときは、本アプリ内またはストアの説明欄でお知らせします。</p>
+<h2>9. お問い合わせ</h2>
+<p>本ポリシーに関するお問い合わせは、次の連絡先までお願いします。</p>
+<ul>
+<li>提供者：ProcessRidge</li>
+<li>連絡先メールアドレス：sh1nya.tkg1016@gmail.com</li>
+</ul>
+<p>お問い合わせでいただいた内容（メールアドレスと本文）は、返信と不具合の確認のためにのみ使い、第三者に提供しません。</p>
+<h2>10. 制定日</h2>
+<ul>
+<li>制定日：2026年10月14日</li>
+<li>最終改定日：2026年10月16日（月額プランの契約状態の確認に RevenueCat を使うことを追記）</li>
+</ul>
+</main>
+</body>
+</html>
